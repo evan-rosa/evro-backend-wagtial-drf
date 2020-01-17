@@ -57,6 +57,7 @@ ALLOWED_HOSTS = [
     "evro.herokuapp.com",
     "evro-io-production.herokuapp.com",
     "evro-stage.herokuapp.com",
+    "evro-stage-backend.herokuapp.com/",
     "www.evro.io",
     "evro.io",
 ]
