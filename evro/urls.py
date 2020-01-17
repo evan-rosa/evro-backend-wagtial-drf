@@ -32,10 +32,6 @@ urlpatterns = [
     url(r'^sitemap\.xml$', sitemap),
     url(r'^\.well-known/', include('letsencrypt.urls')),
 
-
-    re_path('.*', TemplateView.as_view(template_name='index.html')),
-
-
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
