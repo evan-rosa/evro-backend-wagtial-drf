@@ -1,4 +1,4 @@
-#!/Users/Evro/Documents/Career/evro-io/evro-web-live/evro-heroku-nextjs-dev/backend/env/bin/python3.7
+#!/Users/Evro/Documents/Career/evro-io/evro-web-live/nextjs/evro-heroku-stage/backend/env/bin/python3
 
 # $Id: rst2latex.py 5905 2009-04-16 12:04:49Z milde $
 # Author: David Goodger <goodger@python.org>

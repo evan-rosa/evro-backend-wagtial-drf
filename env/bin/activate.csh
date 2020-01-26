@@ -10,7 +10,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/Evro/Documents/Career/evro-io/evro-web-live/evro-heroku-nextjs-dev/backend/env"
+setenv VIRTUAL_ENV "/Users/Evro/Documents/Career/evro-io/evro-web-live/nextjs/evro-heroku-stage/backend/env"
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/bin:$PATH:q"

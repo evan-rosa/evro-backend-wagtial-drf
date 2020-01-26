@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/Users/Evro/Documents/Career/evro-io/evro-web-live/evro-heroku-nextjs-dev/backend/env"
+$VIRTUAL_ENV = r"/Users/Evro/Documents/Career/evro-io/evro-web-live/nextjs/evro-heroku-stage/backend/env"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

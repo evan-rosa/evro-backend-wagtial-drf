@@ -1,4 +1,4 @@
-#!/Users/Evro/Documents/Career/evro-io/evro-web-live/evro-heroku-nextjs-dev/backend/env/bin/python3.7
+#!/Users/Evro/Documents/Career/evro-io/evro-web-live/nextjs/evro-heroku-stage/backend/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
