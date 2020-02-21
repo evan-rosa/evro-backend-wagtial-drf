@@ -30,9 +30,8 @@ server.key
 server.pass.key
 ssl.txt
 sendgrid.env
-rfreg.joblib
-A2_train_nlp.joblib
-A2_train.joblib
+**/*.joblib
+
 
 
 
