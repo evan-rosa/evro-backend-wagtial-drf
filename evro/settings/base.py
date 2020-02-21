@@ -15,7 +15,6 @@ import os
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
-MODELS = os.path.join(BASE_DIR, 'model_wine/models')
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,7 +31,8 @@ INSTALLED_APPS = [
     'about',
     'contact',
     'forms',
-    'model_wine',
+    'endpoints',
+    'endpoints.api.models.wine_pred',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -53,7 +53,6 @@ INSTALLED_APPS = [
 
     'wagtail.api.v2',
     'rest_framework',
-    'rest_pandas',
     'corsheaders',
 
     'modelcluster',
