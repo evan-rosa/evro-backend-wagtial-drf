@@ -31,8 +31,8 @@ INSTALLED_APPS = [
     'about',
     'contact',
     'forms',
-    'endpoints',
-    'endpoints.api.models.wine_pred',
+    # 'endpoints',
+    # 'endpoints.api.models.wine_pred',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
