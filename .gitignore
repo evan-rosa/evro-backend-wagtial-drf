@@ -30,7 +30,7 @@ server.key
 server.pass.key
 ssl.txt
 sendgrid.env
-
+.joblib
 
 
 
