@@ -108,10 +108,10 @@ class DsProjectsPage(Page):
     )
     img_alt = models.CharField(
         max_length=250, default="Image Alt Text")
-    data_review = RichTextField(blank=True)
-    eda_description = RichTextField(blank=True)
+    data_review = models.TextField(blank=True)
+    eda_description = models.TextField(blank=True)
     model_description = RichTextField(blank=True, features=["ul"])
-    model_results = RichTextField(blank=True)
+    model_results = models.TextField(blank=True)
     model_conclusion = models.TextField(blank=True)
     canonical = models.URLField(
         max_length=200, default="Canonical URL")
