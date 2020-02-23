@@ -113,7 +113,6 @@ class DsProjectsPage(Page):
     model_description = RichTextField(blank=True, features=["ul"])
     canonical = models.URLField(
         max_length=200, default="Canonical URL")
-    data_review = RichTextField(blank=True)
 
     # Search index configuration
     search_fields = Page.search_fields + [
@@ -122,7 +121,6 @@ class DsProjectsPage(Page):
         index.FilterField('h_two_eda'),
         index.FilterField('eda_description'),
         index.FilterField('model_description'),
-        index.FilterField('data_review'),
     ]
 
     # Editor panels configuration
@@ -135,7 +133,6 @@ class DsProjectsPage(Page):
         FieldPanel('canonical', classname="full"),
         ImageChooserPanel('ds_image'),
         FieldPanel('img_alt', classname="full"),
-        FieldPanel('data_review', classname="full"),
     ]
     promote_panels = [
         MultiFieldPanel(Page.promote_panels, "Common page configuration"),
@@ -153,7 +150,6 @@ class DsProjectsPage(Page):
         APIField('ds_image_url', serializer=ImageRenditionField(
             'fill-700x700', source='ds_image')),
         APIField('img_alt'),
-        APIField('data_review'),
     ]
 
     # Site Map for DS Projects
