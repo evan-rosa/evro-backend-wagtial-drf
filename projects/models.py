@@ -98,7 +98,7 @@ class ProjectsPage(Page):
 class DsProjectsPage(Page):
     # db fields
     h_one = models.CharField(max_length=250, default="Project Name")
-    problem_statement = RichTextField(blank=True)
+    problem_statement = models.TextField(blank=True)
     ds_image = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
@@ -108,9 +108,11 @@ class DsProjectsPage(Page):
     )
     img_alt = models.CharField(
         max_length=250, default="Image Alt Text")
-    h_two_eda = models.CharField(max_length=250, default="Project Name")
-    eda_description = models.TextField(blank=True)
+    data_review = RichTextField(blank=True)
+    eda_description = RichTextField(blank=True)
     model_description = RichTextField(blank=True, features=["ul"])
+    model_results = RichTextField(blank=True)
+    model_conclusion = RichTextField(blank=True)
     canonical = models.URLField(
         max_length=200, default="Canonical URL")
 
@@ -118,18 +120,22 @@ class DsProjectsPage(Page):
     search_fields = Page.search_fields + [
         index.SearchField('h_one'),
         index.FilterField('problem_statement'),
-        index.FilterField('h_two_eda'),
+        index.FilterField('data_review'),
         index.FilterField('eda_description'),
         index.FilterField('model_description'),
+        index.FilterField('model_results'),
+        index.FilterField('model_conclusion'),
     ]
 
     # Editor panels configuration
     content_panels = Page.content_panels + [
         FieldPanel('h_one'),
         FieldPanel('problem_statement', classname="full"),
-        FieldPanel('h_two_eda', classname="full"),
+        FieldPanel('data_review', classname="full"),
         FieldPanel('eda_description', classname="full"),
         FieldPanel('model_description', classname="full"),
+        FieldPanel('model_results', classname="full"),
+        FieldPanel('model_conclusion', classname="full"),
         FieldPanel('canonical', classname="full"),
         ImageChooserPanel('ds_image'),
         FieldPanel('img_alt', classname="full"),
@@ -142,9 +148,11 @@ class DsProjectsPage(Page):
     api_fields = [
         APIField('h_one'),
         APIField('problem_statement'),
-        APIField('h_two_eda'),
+        APIField('data_review'),
         APIField('eda_description'),
         APIField('model_description'),
+        APIField('model_results'),
+        APIField('model_conclusion'),
         APIField('canonical'),
         APIField('ds_image'),
         APIField('ds_image_url', serializer=ImageRenditionField(
