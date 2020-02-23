@@ -111,7 +111,8 @@ class DsProjectsPage(Page):
     h_two_eda = models.CharField(max_length=250, default="Project Name")
     eda_description = models.TextField(blank=True)
     model_description = RichTextField(blank=True, features=["ul"])
-    model_results = models.TextField(blank=True)
+    model_result = models.TextField(blank=True)
+    model_conclusion = models.TextField(blank=True)
     canonical = models.URLField(
         max_length=200, default="Canonical URL")
 
@@ -122,7 +123,8 @@ class DsProjectsPage(Page):
         index.FilterField('h_two_eda'),
         index.FilterField('eda_description'),
         index.FilterField('model_description'),
-        index.FilterField('model_results'),
+        index.FilterField('model_result'),
+        index.FilterField('model_conclusion'),
     ]
 
     # Editor panels configuration
@@ -132,7 +134,8 @@ class DsProjectsPage(Page):
         FieldPanel('h_two_eda', classname="full"),
         FieldPanel('eda_description', classname="full"),
         FieldPanel('model_description', classname="full"),
-        FieldPanel('model_results', classname="full"),
+        FieldPanel('model_result', classname="full"),
+        FieldPanel('model_conclusion', classname="full"),
         FieldPanel('canonical', classname="full"),
         ImageChooserPanel('ds_image'),
         FieldPanel('img_alt', classname="full"),
@@ -148,8 +151,8 @@ class DsProjectsPage(Page):
         APIField('h_two_eda'),
         APIField('eda_description'),
         APIField('model_description'),
-        APIField('model_results'),
-
+        APIField('model_result'),
+        APIField('model_conclusion'),
         APIField('canonical'),
         APIField('ds_image'),
         APIField('ds_image_url', serializer=ImageRenditionField(
