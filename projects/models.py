@@ -110,8 +110,8 @@ class DsProjectsPage(Page):
         max_length=250, default="Image Alt Text")
     h_two_eda = models.CharField(max_length=250, default="Project Name")
     data_summary = models.TextField(blank=True)
-    eda = RichTextField(blank=True, features=["ul"])
-    model_description = RichTextField(blank=True, features=["ul"])
+    eda = RichTextField(blank=True)
+    model_description = RichTextField(blank=True)
     model_result = models.TextField(blank=True)
     model_conclusion = models.TextField(blank=True)
     canonical = models.URLField(
