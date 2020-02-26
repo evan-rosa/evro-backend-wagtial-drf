@@ -108,9 +108,9 @@ class DsProjectsPage(Page):
     )
     img_alt = models.CharField(
         max_length=250, default="Image Alt Text")
-    h_two_eda = models.CharField(max_length=250, default="Project Name")
+    h_two = models.CharField(max_length=250, default="Project Name")
     data_summary = models.TextField(blank=True)
-    eda = RichTextField(blank=True)
+    eda = models.TextField(blank=True)
     model_description = RichTextField(blank=True)
     model_result = models.TextField(blank=True)
     model_conclusion = models.TextField(blank=True)
@@ -121,7 +121,7 @@ class DsProjectsPage(Page):
     search_fields = Page.search_fields + [
         index.SearchField('h_one'),
         index.FilterField('problem_statement'),
-        index.FilterField('h_two_eda'),
+        index.FilterField('h_two'),
         index.FilterField('eda'),
         index.FilterField('data_summary'),
         index.FilterField('model_description'),
@@ -133,9 +133,9 @@ class DsProjectsPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('h_one'),
         FieldPanel('problem_statement', classname="full"),
-        FieldPanel('h_two_eda', classname="full"),
-        FieldPanel('eda', classname="full"),
+        FieldPanel('h_two', classname="full"),
         FieldPanel('data_summary', classname="full"),
+        FieldPanel('eda', classname="full"),
         FieldPanel('model_description', classname="full"),
         FieldPanel('model_result', classname="full"),
         FieldPanel('model_conclusion', classname="full"),
@@ -151,7 +151,7 @@ class DsProjectsPage(Page):
     api_fields = [
         APIField('h_one'),
         APIField('problem_statement'),
-        APIField('h_two_eda'),
+        APIField('h_two'),
         APIField('data_summary'),
         APIField('eda'),
         APIField('model_description'),
