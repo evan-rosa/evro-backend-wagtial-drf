@@ -110,7 +110,9 @@ class DsProjectsPage(Page):
         max_length=250, default="Image Alt Text")
     h_two = models.CharField(max_length=250, default="Project Name")
     data_summary = models.TextField(blank=True)
-    eda = models.TextField(blank=True)
+    eda_section_one = models.TextField(blank=True)
+    eda_section_two = models.TextField(blank=True)
+    eda_section_three = models.TextField(blank=True)
     model_description = RichTextField(blank=True)
     model_result = models.TextField(blank=True)
     model_conclusion = models.TextField(blank=True)
@@ -122,7 +124,9 @@ class DsProjectsPage(Page):
         index.SearchField('h_one'),
         index.FilterField('problem_statement'),
         index.FilterField('h_two'),
-        index.FilterField('eda'),
+        index.FilterField('eda_section_one'),
+        index.FilterField('eda_section_two'),
+        index.FilterField('eda_section_three'),
         index.FilterField('data_summary'),
         index.FilterField('model_description'),
         index.FilterField('model_result'),
@@ -135,7 +139,9 @@ class DsProjectsPage(Page):
         FieldPanel('problem_statement', classname="full"),
         FieldPanel('h_two', classname="full"),
         FieldPanel('data_summary', classname="full"),
-        FieldPanel('eda', classname="full"),
+        FieldPanel('eda_section_one', classname="full"),
+        FieldPanel('eda_section_two', classname="full"),
+        FieldPanel('eda_section_three', classname="full"),
         FieldPanel('model_description', classname="full"),
         FieldPanel('model_result', classname="full"),
         FieldPanel('model_conclusion', classname="full"),
@@ -153,7 +159,9 @@ class DsProjectsPage(Page):
         APIField('problem_statement'),
         APIField('h_two'),
         APIField('data_summary'),
-        APIField('eda'),
+        APIField('eda_section_one'),
+        APIField('eda_section_two'),
+        APIField('eda_section_three'),
         APIField('model_description'),
         APIField('model_result'),
         APIField('model_conclusion'),
