@@ -95,7 +95,7 @@ ROOT_URLCONF = 'evro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['evro/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
